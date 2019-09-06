@@ -5,21 +5,23 @@
 #include "Pabellon.h"
 #include <ostream>
 
-Pabellon() {
+Pabellon::Pabellon() {
 	setId(´ ´);
 	setGenero(´ ´);
+	setCantidad(0);
+	setTamano(0);
 
 }
 
-Pabellon::Pabellon(char id, char genero, int tamaño, int cantidad) : id(id), genero(genero), tamañ(tamaño) cantidad(cantidad) {
-
+Pabellon::Pabellon(char id, char genero, int tamaño) : id(id), genero(genero), tamañ(tamaño){
+	cantidad = 0;
+	cama = new Cama*[tamano];
 }
 
-Pabellon::Pabellon(int tamano) {
-	for (int pabellon = 0; pabellon < tamaño; pabellon++) {
-
-	}
+Pabellon::Pabellon(){
+	delete[] cama;
 }
+
 	//Metodos set
 void Pabellon::setId(char id){
 	id = id;
@@ -46,3 +48,5 @@ int Pabellon::getTamano()const {
 int Pabellon::getCantidad()const {
 	return cantidad;
 }
+
+//Metodos
