@@ -3,4 +3,9 @@
 //
 
 #include "Cama.h"
+#include <ostream>
 
+Cama() {
+	setCodigo(´ ´);
+	setEstado()
+}
